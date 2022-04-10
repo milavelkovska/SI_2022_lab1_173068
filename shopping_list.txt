@@ -1,5 +1,6 @@
 egg x6
 yogurt x5
 milk x4
-banana x7
+pear x7
 apple x2
+cucumber x6
