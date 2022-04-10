@@ -1,5 +1,5 @@
-egg
-yogurt
-milk 
-banana
-apple
+egg x6
+yogurt x5
+milk x4
+banana x7
+apple x2
