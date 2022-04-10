@@ -1,0 +1,131 @@
+git clone https://github.com/milavelkovska/SI_2022_lab1_173068.git (гит команда за клонирање на постоечки репозиториум и креирање негова копија локално на нашиот компјутер)
+
+cd SI_2022_lab1_173068.git (команда за влегување во фолдерот)
+
+nano shopping_list.txt ( креирање а воедно и едитирање односно пополнување на текстуалната датотека)
+
+git add shopping_list.txt (ставање на промените на датотеката на сцена(staging area), со тоа наговестуваме дека сакаме овие апдејти да ги вклучиме при следен commit)
+
+git commit -m "Add 5 items to the shopping list" (сочувување на промените на нашата датотека која беше ставена на сцена и commit порака)
+
+nano shopping_list.txt (повторно едитирање на текстуалната датотека)
+
+git add shopping_list.txt (повторно ставање на промените на сцена)
+
+git commit -m "Add quantities to the items." (повторно сочувување на промените на датотеката и commit порака)
+
+git push origin master(синхронизирање на master гранката со оддалечениот репозиториум)
+
+git branch branch1(креирање на нова гранка наречена branch1 која ќе ги има сите датотеки што веќе има нашата мастер гранка)
+
+git branch branch2(креирање на нова гранка наречена branch2)
+
+Внесете ги досегашните логови во документацијата (PART 1)
+
+$ git log
+commit 16cc1b900e28a9c7da5d897233a3820f4cde390b (HEAD -> master, origin/master, commit 16cc1b900e28a9c7da5d897233a3820f4cde390b (HEAD -> master, origin/master,
+origin/HEAD, branch2, branch1)
+Author: mvelkovska <mlvelkovska@gmail.com>
+Date:   Sun Apr 10 21:32:37 2022 +0200
+
+    Add quantities to the items
+
+commit 2608c2d16ff70006552f0632bf72edb2a34875be
+Author: mvelkovska <mlvelkovska@gmail.com>
+Date:   Sun Apr 10 21:31:39 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit e94bf804ff65e07fa17064c91a28870c1ae3a996
+Author: milavelkovska <63562729+milavelkovska@users.noreply.github.com>
+Date:   Sun Apr 10 21:28:42 2022 +0200
+
+    Initial commit
+
+commit aed5c96b850a5fadf0ee2eca56d7af3887ddfe37
+Author: milavelkovska <63562729+milavelkovska@users.noreply.github.com>
+Date:   Sun Apr 10 21:28:08 2022 +0200
+
+    Initial commit
+
+
+
+
+git push origin branch1(синхронизирање гранка1 со оддалечен репозиториум)
+git push origin branch2(синхронизирање гранка2 со оддалечен репозиториум)
+
+git checkout branch1 ( се префрламе на гранка1)
+nano shopping_list.txt ( ја едитираме датотеката)
+git commit -a -m "Change quantity of item #5" (во една команда спојуваме две гит команди односно git add и git commit, ја ставаме датотеката на сцена и ја комитираме)
+
+git checkout master(се префрламе на мастер гранката)
+nano shopping_list.txt(ја едитираме датотеката)
+git commit -a -m "Change quantity of item #2"(ја ставаме датотеката на сцена и ја комитираме)
+
+git push origin master (ја синхронизираме мастер гранката со оддалечениот репозиториум)
+
+git checkout branch1(се префрламе на гранка1)
+git push origin branch1(ја синхронизираме гранката1 со оддалечениот директориум)
+
+git checkout branch2(се префламе на гранка2)
+nano shopping_list.txt(едитираме датотека)
+git commit -a -m "Modify item #4" (во една команда спојуваме две гит команди односно git add и git commit, ја ставаме датотеката на сцена и ја комитираме)
+
+
+Внесете ги досегашните логови во документацијата (PART 2)
+
+//branch2
+$ git log
+commit 81d47a13da71bc4f9f5efba8233eaff902d92800 (HEAD -> branch2)
+Author: mvelkovska <mlvelkovska@gmail.com>
+Date:   Sun Apr 10 21:40:50 2022 +0200
+
+    Modify item #4
+
+
+//branch1
+
+$ git log
+commit e76f138bde23e2de5ce45c70c49473ac01dd83ac (HEAD -> branch1, origin/branch1)
+Author: mvelkovska <mlvelkovska@gmail.com>
+Date:   Sun Apr 10 21:38:45 2022 +0200
+
+    Change quantity of item #5
+
+
+//master
+
+$ git log
+commit 76f360b8328af4c48ff62c0186f67ec00fccc433 (HEAD -> master, origin/master, origin/HEAD)
+Author: mvelkovska <mlvelkovska@gmail.com>
+Date:   Sun Apr 10 21:39:25 2022 +0200
+
+    Change quantity of item #2
+
+
+
+(сеуште сме на гранка2)
+nano shopping_list.txt(едитирање на шопинг листата со новото што треба да го додадеме)
+git add shopping_list.txt(додавање на сцената)
+git commit --amend(измена на најнеодамнешниот commit,изменување на commit пораката)
+
+git push origin branch2
+
+Внесете ги досегашните логови во документацијата (PART 3)
+
+branch 2:
+$ git log
+commit 39f9054b939a829447f90563618d1035bbb2948f (HEAD -> branch2, origin/branch2)
+Author: mvelkovska <mlvelkovska@gmail.com>
+Date:   Sun Apr 10 21:40:50 2022 +0200
+
+    Modify item #4 and add item #6
+
+
+git checkout master(префрлување на гранката мастер)
+git merge branch1(спојување на гранката мастер со гранка1, не се појавија конфликти, рекурзивно спојување) 
+git push(синхронизирање со оддалечениот репозиториум)
+
+nano 173068.txt(пополнување на документацијата)
+git commit -a -m "Add docs"(ставање на сцена и комитирање)
+git push origin master(синхронизација со оддалечениот репозиториум)
